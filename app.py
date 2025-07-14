@@ -36,3 +36,13 @@ if st.button("Predict Energy Usage"):
     input_data = np.array([[temperature, humidity, wind_speed, dew_point]])
     prediction = model.predict(input_data)[0]
     st.success(f"🔋 Estimated Energy Consumption: **{prediction:.2f} kWh**")
+ value=22.0)
+humidity = st.number_input("Humidity (%)", value=40.0)
+wind_speed = st.number_input("Wind Speed (m/s)", value=3.5)
+dew_point = st.number_input("Dew Point (°C)", value=12.0)
+
+# 4. Prediction
+if st.button("Predict Energy Usage"):
+    input_data = np.array([[temperature, humidity, wind_speed, dew_point]])
+    prediction = model.predict(input_data)[0]
+    st.success(f"🔋 Estimated Energy Consumption: **{prediction:.2f} kWh**")
